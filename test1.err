@@ -1,0 +1,63 @@
+1		#Test case 1 for assembler. 
+
+2		
+
+3		               .text
+
+4		test1:         lwa    $1,val1      #Puts -1 in $1.
+
+5		               prh    $1
+
+6		
+
+7		val12:         lwa    $2,val2
+
+8		               prh    $2
+
+9		               sll    $3,$2,16
+
+10		               prh    $3
+
+11		
+
+12		val123:        srl    $4,$1,16
+
+13		               prh    $4
+
+14		
+
+15		val1234:       sra    $5,$1,16
+
+16		               prh    $5
+
+17		
+
+18		#A label with 8 characters.
+
+19		val12345:      xor    $6,$1,$2
+
+20		               prh    $6
+
+21		               lwb    $7,0($1)
+
+22		               prh    $7
+
+23		               hlt
+
+24		
+
+25		               .data
+
+26		val1:          .word  -1:4
+
+27		val2:          .word  65535:1
+
+28		
+
+29		#No more lines.
+
+Errors detected: 
+
+Multiply Defined Symbol(s): 
+
+Undefined Symbol(s): 
